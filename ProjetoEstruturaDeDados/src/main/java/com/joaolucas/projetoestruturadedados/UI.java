@@ -27,6 +27,9 @@ public class UI extends javax.swing.JFrame {
         btnListaSequencial = new javax.swing.JButton();
         btnListaSE = new javax.swing.JButton();
         btnListaDE = new javax.swing.JButton();
+        btnPilha = new javax.swing.JButton();
+        btnFila = new javax.swing.JButton();
+        btnArvore = new javax.swing.JButton();
         frameInterno = new javax.swing.JInternalFrame();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -69,6 +72,31 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
+        btnPilha.setBackground(new java.awt.Color(51, 255, 255));
+        btnPilha.setText("Pilhas");
+        btnPilha.setToolTipText("");
+        btnPilha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPilhaActionPerformed(evt);
+            }
+        });
+
+        btnFila.setBackground(new java.awt.Color(51, 255, 255));
+        btnFila.setText("FIlas");
+        btnFila.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFilaActionPerformed(evt);
+            }
+        });
+
+        btnArvore.setBackground(new java.awt.Color(51, 255, 255));
+        btnArvore.setText("Arvore");
+        btnArvore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArvoreActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelMenuLayout = new javax.swing.GroupLayout(painelMenu);
         painelMenu.setLayout(painelMenuLayout);
         painelMenuLayout.setHorizontalGroup(
@@ -79,16 +107,26 @@ public class UI extends javax.swing.JFrame {
                 .addComponent(btnListaSE, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnListaDE, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 118, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPilha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnFila, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnArvore, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         painelMenuLayout.setVerticalGroup(
             painelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMenuLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(painelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnListaSequencial, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnListaSE, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnListaDE, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(painelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(btnListaSequencial, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnListaSE, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnListaDE, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(painelMenuLayout.createSequentialGroup()
+                .addGroup(painelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnFila, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                    .addComponent(btnPilha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnArvore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         frameInterno.setVisible(true);
@@ -97,11 +135,11 @@ public class UI extends javax.swing.JFrame {
         frameInterno.getContentPane().setLayout(frameInternoLayout);
         frameInternoLayout.setHorizontalGroup(
             frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 487, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         frameInternoLayout.setVerticalGroup(
             frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 286, Short.MAX_VALUE)
+            .addGap(0, 280, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,6 +189,24 @@ public class UI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnListaDEActionPerformed
 
+    private void btnPilhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPilhaActionPerformed
+        FramePilha frame = new FramePilha();
+        this.dispose();
+        frame.setVisible(true);
+    }//GEN-LAST:event_btnPilhaActionPerformed
+
+    private void btnFilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFilaActionPerformed
+        FrameFila frame = new FrameFila();
+        this.dispose();
+        frame.setVisible(true);
+    }//GEN-LAST:event_btnFilaActionPerformed
+
+    private void btnArvoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArvoreActionPerformed
+        FrameArvore frame = new FrameArvore();
+        this.dispose();
+        frame.setVisible(true);
+    }//GEN-LAST:event_btnArvoreActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -187,9 +243,12 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnArvore;
+    private javax.swing.JButton btnFila;
     private javax.swing.JButton btnListaDE;
     private javax.swing.JButton btnListaSE;
     private javax.swing.JButton btnListaSequencial;
+    private javax.swing.JButton btnPilha;
     private javax.swing.JInternalFrame frameInterno;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel painelMenu;
