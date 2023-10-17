@@ -4,6 +4,9 @@
  */
 package com.joaolucas.projetoestruturadedados;
 
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author joao
@@ -13,8 +16,94 @@ public class FramePilha extends javax.swing.JFrame {
     /**
      * Creates new form FramePilha
      */
+    // Utilizando o codigo de pilhas sequenciais disponibilizado pelo professor
+    public class PilhaSeq {
+	private int dados[]; 
+	private int topo; 
+    
+        public PilhaSeq(){
+            dados = new int[10];
+            topo = -1;
+        }
+
+        public PilhaSeq(int n){
+            dados = new int[n];
+            topo = -1;
+        }
+
+        /** Verifica se a Pilha está vazia */
+        public boolean vazia(){
+            if (topo == -1)
+                    return true;
+            else 
+                return false;
+            }
+
+        /**Verifica se a Pilha está cheia */
+        public boolean cheia(){
+            if (topo == (dados.length-1))
+                      return true;
+          else
+                      return false;
+            }
+
+        /**Obtém o tamanho da Pilha*/
+        public int tamanho(){
+                    return topo+1;
+            }
+
+        /** Consulta o elemento do topo da Pilha.
+                    Retorna -1 se a pilha estiver vazia, 
+                    caso contrário retorna o valor que está no topo da pilha. */
+            public int top() {
+          if (vazia()) 
+             return -1; // pilha vazia
+
+          return dados[topo];
+            }
+
+             /** Insere um elemento no topo da pilha.
+              Retorna false se a pilha estiver cheia. 
+              Caso contrário retorna true */
+            public boolean push (int valor) {
+                    if (cheia()) 
+                            return false;  // err: pilha cheia 
+
+                    topo++;
+                    dados[topo] = valor; 
+                    return true;
+             }   
+
+             /** Retira o elemento do topo da pilha.
+              Retorna -1 se a pilha estiver vazia. */
+            public int pop() {          
+                    if (vazia()) 
+                            throw  new InternalError();
+
+                    int valor = dados[topo]; 
+                    topo--; 
+                    return valor;
+            }
+    }
+    
+    
+    
+    private PilhaSeq pilha;
+    private JButton[] listaDeElementos;
     public FramePilha() {
         initComponents();
+        this.pilha = new  PilhaSeq();
+        this.listaDeElementos = new JButton[10];
+        this.listaDeElementos[0] = this.elemento1;
+        this.listaDeElementos[1] = this.elemento2;
+        this.listaDeElementos[2] = this.elemento3;
+        this.listaDeElementos[3] = this.elemento4;
+        this.listaDeElementos[4] = this.elemento5;
+        this.listaDeElementos[5] = this.elemento6;
+        this.listaDeElementos[6] = this.elemento7;
+        this.listaDeElementos[7] = this.elemento8;
+        this.listaDeElementos[8] = this.elemento9;
+        this.listaDeElementos[9] = this.elemento10;
     }
 
     /**
@@ -34,7 +123,29 @@ public class FramePilha extends javax.swing.JFrame {
         btnFila = new javax.swing.JButton();
         btnArvore = new javax.swing.JButton();
         frameInterno = new javax.swing.JInternalFrame();
-        jLabel1 = new javax.swing.JLabel();
+        painelInserir = new javax.swing.JPanel();
+        labelInserir = new javax.swing.JLabel();
+        fieldInserir = new javax.swing.JTextField();
+        btnInserir = new javax.swing.JButton();
+        painelRemover = new javax.swing.JPanel();
+        labelRemover = new javax.swing.JLabel();
+        btnRemover = new javax.swing.JButton();
+        painelConsultar = new javax.swing.JPanel();
+        labelConsultar = new javax.swing.JLabel();
+        btnConsultar = new javax.swing.JButton();
+        elemento1 = new javax.swing.JButton();
+        elemento2 = new javax.swing.JButton();
+        elemento3 = new javax.swing.JButton();
+        elemento4 = new javax.swing.JButton();
+        elemento5 = new javax.swing.JButton();
+        elemento6 = new javax.swing.JButton();
+        elemento7 = new javax.swing.JButton();
+        elemento8 = new javax.swing.JButton();
+        elemento9 = new javax.swing.JButton();
+        elemento10 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         painelMenu.setBackground(new java.awt.Color(51, 255, 255));
 
@@ -103,7 +214,7 @@ public class FramePilha extends javax.swing.JFrame {
                 .addComponent(btnFila, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnArvore, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         painelMenuLayout.setVerticalGroup(
             painelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,23 +232,207 @@ public class FramePilha extends javax.swing.JFrame {
 
         frameInterno.setVisible(true);
 
-        jLabel1.setText("PIlha");
+        painelInserir.setBackground(new java.awt.Color(204, 204, 204));
+
+        labelInserir.setText("Inserir");
+
+        btnInserir.setBackground(new java.awt.Color(102, 255, 255));
+        btnInserir.setText("Inserir");
+        btnInserir.setBorder(null);
+        btnInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInserirActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout painelInserirLayout = new javax.swing.GroupLayout(painelInserir);
+        painelInserir.setLayout(painelInserirLayout);
+        painelInserirLayout.setHorizontalGroup(
+            painelInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelInserirLayout.createSequentialGroup()
+                .addGroup(painelInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelInserirLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(labelInserir))
+                    .addGroup(painelInserirLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(painelInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldInserir, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+                            .addComponent(btnInserir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelInserirLayout.setVerticalGroup(
+            painelInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelInserirLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelInserir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(fieldInserir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnInserir, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+
+        painelRemover.setBackground(new java.awt.Color(204, 204, 204));
+
+        labelRemover.setText("Remover");
+
+        btnRemover.setBackground(new java.awt.Color(102, 255, 255));
+        btnRemover.setText("Remover");
+        btnRemover.setBorder(null);
+        btnRemover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoverActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout painelRemoverLayout = new javax.swing.GroupLayout(painelRemover);
+        painelRemover.setLayout(painelRemoverLayout);
+        painelRemoverLayout.setHorizontalGroup(
+            painelRemoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelRemoverLayout.createSequentialGroup()
+                .addGroup(painelRemoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelRemoverLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(labelRemover))
+                    .addGroup(painelRemoverLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(btnRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelRemoverLayout.setVerticalGroup(
+            painelRemoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelRemoverLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelRemover)
+                .addGap(29, 29, 29)
+                .addComponent(btnRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+
+        painelConsultar.setBackground(new java.awt.Color(204, 204, 204));
+
+        labelConsultar.setText("Consultar");
+
+        btnConsultar.setBackground(new java.awt.Color(51, 255, 255));
+        btnConsultar.setText("Consultar");
+        btnConsultar.setBorder(null);
+        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout painelConsultarLayout = new javax.swing.GroupLayout(painelConsultar);
+        painelConsultar.setLayout(painelConsultarLayout);
+        painelConsultarLayout.setHorizontalGroup(
+            painelConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelConsultarLayout.createSequentialGroup()
+                .addGroup(painelConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelConsultarLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(labelConsultar))
+                    .addGroup(painelConsultarLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        painelConsultarLayout.setVerticalGroup(
+            painelConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelConsultarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelConsultar)
+                .addGap(35, 35, 35)
+                .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        elemento1.setBackground(new java.awt.Color(51, 255, 255));
+        elemento1.setText("null");
+
+        elemento2.setBackground(new java.awt.Color(51, 255, 255));
+        elemento2.setText("null");
+
+        elemento3.setBackground(new java.awt.Color(51, 255, 255));
+        elemento3.setText("null");
+
+        elemento4.setBackground(new java.awt.Color(51, 255, 255));
+        elemento4.setText("null");
+
+        elemento5.setBackground(new java.awt.Color(51, 255, 255));
+        elemento5.setText("null");
+
+        elemento6.setBackground(new java.awt.Color(51, 255, 255));
+        elemento6.setText("null");
+
+        elemento7.setBackground(new java.awt.Color(51, 255, 255));
+        elemento7.setText("null");
+
+        elemento8.setBackground(new java.awt.Color(51, 255, 255));
+        elemento8.setText("null");
+
+        elemento9.setBackground(new java.awt.Color(51, 255, 255));
+        elemento9.setText("null");
+
+        elemento10.setBackground(new java.awt.Color(51, 255, 255));
+        elemento10.setText("null");
 
         javax.swing.GroupLayout frameInternoLayout = new javax.swing.GroupLayout(frameInterno.getContentPane());
         frameInterno.getContentPane().setLayout(frameInternoLayout);
         frameInternoLayout.setHorizontalGroup(
             frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameInternoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(360, 360, 360))
+            .addGroup(frameInternoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(painelRemover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(painelInserir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(painelConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(219, 219, 219)
+                .addGroup(frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(elemento1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento5, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento6, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento7, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento8, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento9, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(elemento10, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         frameInternoLayout.setVerticalGroup(
             frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frameInternoLayout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addComponent(jLabel1)
-                .addContainerGap(202, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameInternoLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addGroup(frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(frameInternoLayout.createSequentialGroup()
+                        .addComponent(painelInserir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(painelRemover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(painelConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(frameInternoLayout.createSequentialGroup()
+                        .addComponent(elemento10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(elemento3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(elemento1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -200,16 +495,76 @@ public class FramePilha extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_btnArvoreActionPerformed
 
+    
+    //Operações na pilha
+   
+    //Inserir:
+    private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
+        int valor;
+        boolean inseriu;
+        try{
+            valor = Integer.parseInt(this.fieldInserir.getText());
+            if(this.pilha.tamanho() < 10){
+                this.listaDeElementos[this.pilha.tamanho()].setText(this.fieldInserir.getText());            
+                this.pilha.push(valor);
+                
+            }else{
+                JOptionPane.showMessageDialog(null, "Pilha Cheia", "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Digite apenas numeros", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnInserirActionPerformed
+    //Remover:
+    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
+        int valor;
+        try{
+            if(!this.pilha.vazia()){
+                this.listaDeElementos[this.pilha.tamanho()-1].setText("null");
+            }
+            valor = this.pilha.pop();
+        }catch(InternalError e){
+            JOptionPane.showMessageDialog(null, "Pilha Vazia", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnRemoverActionPerformed
+    //Consultar O topo:
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        if(!this.pilha.vazia()){
+             JOptionPane.showMessageDialog(null, "O elemento no topo da pilha é: "+ String.valueOf(this.pilha.top()), "Topo", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+          JOptionPane.showMessageDialog(null, "Pilha Vazia", "Erro", JOptionPane.ERROR_MESSAGE); 
+        }   
+    }//GEN-LAST:event_btnConsultarActionPerformed
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnArvore;
+    private javax.swing.JButton btnConsultar;
     private javax.swing.JButton btnFila;
+    private javax.swing.JButton btnInserir;
     private javax.swing.JButton btnListaDe;
     private javax.swing.JButton btnListaSe;
     private javax.swing.JButton btnListaSeq;
     private javax.swing.JButton btnPilha;
+    private javax.swing.JButton btnRemover;
+    private javax.swing.JButton elemento1;
+    private javax.swing.JButton elemento10;
+    private javax.swing.JButton elemento2;
+    private javax.swing.JButton elemento3;
+    private javax.swing.JButton elemento4;
+    private javax.swing.JButton elemento5;
+    private javax.swing.JButton elemento6;
+    private javax.swing.JButton elemento7;
+    private javax.swing.JButton elemento8;
+    private javax.swing.JButton elemento9;
+    private javax.swing.JTextField fieldInserir;
     private javax.swing.JInternalFrame frameInterno;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel labelConsultar;
+    private javax.swing.JLabel labelInserir;
+    private javax.swing.JLabel labelRemover;
+    private javax.swing.JPanel painelConsultar;
+    private javax.swing.JPanel painelInserir;
     private javax.swing.JPanel painelMenu;
+    private javax.swing.JPanel painelRemover;
     // End of variables declaration//GEN-END:variables
 }

@@ -34,7 +34,43 @@ public class FrameArvore extends javax.swing.JFrame {
         btnFilas = new javax.swing.JButton();
         btnArvore = new javax.swing.JButton();
         frameInterno = new javax.swing.JInternalFrame();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        no1 = new javax.swing.JPanel();
+        elemento1 = new javax.swing.JButton();
+        no2 = new javax.swing.JPanel();
+        elemento2 = new javax.swing.JButton();
+        elemento3 = new javax.swing.JButton();
+        no3 = new javax.swing.JPanel();
+        elemento4 = new javax.swing.JButton();
+        elemento5 = new javax.swing.JButton();
+        elemento6 = new javax.swing.JButton();
+        elemento7 = new javax.swing.JButton();
+        no4 = new javax.swing.JPanel();
+        elemento8 = new javax.swing.JButton();
+        elemento9 = new javax.swing.JButton();
+        elemento10 = new javax.swing.JButton();
+        elemento11 = new javax.swing.JButton();
+        elemento12 = new javax.swing.JButton();
+        elemento13 = new javax.swing.JButton();
+        elemento14 = new javax.swing.JButton();
+        elemento15 = new javax.swing.JButton();
+        no5 = new javax.swing.JPanel();
+        elemento16 = new javax.swing.JButton();
+        elemento17 = new javax.swing.JButton();
+        elemento18 = new javax.swing.JButton();
+        elemento19 = new javax.swing.JButton();
+        elemento20 = new javax.swing.JButton();
+        elemento21 = new javax.swing.JButton();
+        elemento22 = new javax.swing.JButton();
+        elemento23 = new javax.swing.JButton();
+        elemento24 = new javax.swing.JButton();
+        elemento25 = new javax.swing.JButton();
+        elemento26 = new javax.swing.JButton();
+        elemento27 = new javax.swing.JButton();
+        elemento28 = new javax.swing.JButton();
+        elemento29 = new javax.swing.JButton();
+        elemento30 = new javax.swing.JButton();
+        elemento31 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,7 +141,7 @@ public class FrameArvore extends javax.swing.JFrame {
                 .addComponent(btnFilas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnArvore, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelMenuLayout.setVerticalGroup(
             painelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,23 +159,342 @@ public class FrameArvore extends javax.swing.JFrame {
 
         frameInterno.setVisible(true);
 
-        jLabel1.setText("Arvore");
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 149, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 403, Short.MAX_VALUE)
+        );
+
+        elemento1.setBackground(new java.awt.Color(0, 255, 255));
+        elemento1.setText("null");
+        elemento1.setToolTipText("");
+
+        javax.swing.GroupLayout no1Layout = new javax.swing.GroupLayout(no1);
+        no1.setLayout(no1Layout);
+        no1Layout.setHorizontalGroup(
+            no1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(elemento1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(479, 479, 479))
+        );
+        no1Layout.setVerticalGroup(
+            no1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(elemento1)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        elemento2.setBackground(new java.awt.Color(0, 255, 255));
+        elemento2.setText("null");
+        elemento2.setToolTipText("");
+
+        elemento3.setBackground(new java.awt.Color(0, 255, 255));
+        elemento3.setText("null");
+        elemento3.setToolTipText("");
+
+        javax.swing.GroupLayout no2Layout = new javax.swing.GroupLayout(no2);
+        no2.setLayout(no2Layout);
+        no2Layout.setHorizontalGroup(
+            no2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no2Layout.createSequentialGroup()
+                .addGap(206, 206, 206)
+                .addComponent(elemento2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(elemento3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(201, 201, 201))
+        );
+        no2Layout.setVerticalGroup(
+            no2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(no2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(elemento2)
+                    .addComponent(elemento3))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        elemento4.setBackground(new java.awt.Color(0, 255, 255));
+        elemento4.setText("null");
+        elemento4.setToolTipText("");
+
+        elemento5.setBackground(new java.awt.Color(0, 255, 255));
+        elemento5.setText("null");
+        elemento5.setToolTipText("");
+
+        elemento6.setBackground(new java.awt.Color(0, 255, 255));
+        elemento6.setText("null");
+        elemento6.setToolTipText("");
+
+        elemento7.setBackground(new java.awt.Color(0, 255, 255));
+        elemento7.setText("null");
+        elemento7.setToolTipText("");
+
+        javax.swing.GroupLayout no3Layout = new javax.swing.GroupLayout(no3);
+        no3.setLayout(no3Layout);
+        no3Layout.setHorizontalGroup(
+            no3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no3Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(elemento4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(191, 191, 191)
+                .addComponent(elemento6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(elemento7, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(182, 182, 182)
+                .addComponent(elemento5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
+        );
+        no3Layout.setVerticalGroup(
+            no3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(no3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(elemento4)
+                    .addComponent(elemento5)
+                    .addComponent(elemento6)
+                    .addComponent(elemento7))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
+        elemento8.setBackground(new java.awt.Color(0, 255, 255));
+        elemento8.setText("null");
+        elemento8.setToolTipText("");
+
+        elemento9.setBackground(new java.awt.Color(0, 255, 255));
+        elemento9.setText("null");
+        elemento9.setToolTipText("");
+
+        elemento10.setBackground(new java.awt.Color(0, 255, 255));
+        elemento10.setText("null");
+        elemento10.setToolTipText("");
+
+        elemento11.setBackground(new java.awt.Color(0, 255, 255));
+        elemento11.setText("null");
+        elemento11.setToolTipText("");
+
+        elemento12.setBackground(new java.awt.Color(0, 255, 255));
+        elemento12.setText("null");
+        elemento12.setToolTipText("");
+
+        elemento13.setBackground(new java.awt.Color(0, 255, 255));
+        elemento13.setText("null");
+        elemento13.setToolTipText("");
+
+        elemento14.setBackground(new java.awt.Color(0, 255, 255));
+        elemento14.setText("null");
+        elemento14.setToolTipText("");
+
+        elemento15.setBackground(new java.awt.Color(0, 255, 255));
+        elemento15.setText("null");
+        elemento15.setToolTipText("");
+
+        javax.swing.GroupLayout no4Layout = new javax.swing.GroupLayout(no4);
+        no4.setLayout(no4Layout);
+        no4Layout.setHorizontalGroup(
+            no4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no4Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(elemento8, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addComponent(elemento13, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
+                .addComponent(elemento10, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
+                .addComponent(elemento12, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(120, 120, 120)
+                .addComponent(elemento11, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(elemento14, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addComponent(elemento15, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(elemento9, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
+        );
+        no4Layout.setVerticalGroup(
+            no4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(no4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(elemento8)
+                    .addComponent(elemento9)
+                    .addComponent(elemento10)
+                    .addComponent(elemento11)
+                    .addComponent(elemento12)
+                    .addComponent(elemento13)
+                    .addComponent(elemento14)
+                    .addComponent(elemento15))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        elemento16.setBackground(new java.awt.Color(0, 255, 255));
+        elemento16.setText("null");
+        elemento16.setToolTipText("");
+
+        elemento17.setBackground(new java.awt.Color(0, 255, 255));
+        elemento17.setText("null");
+        elemento17.setToolTipText("");
+
+        elemento18.setBackground(new java.awt.Color(0, 255, 255));
+        elemento18.setText("null");
+        elemento18.setToolTipText("");
+
+        elemento19.setBackground(new java.awt.Color(0, 255, 255));
+        elemento19.setText("null");
+        elemento19.setToolTipText("");
+
+        elemento20.setBackground(new java.awt.Color(0, 255, 255));
+        elemento20.setText("null");
+        elemento20.setToolTipText("");
+
+        elemento21.setBackground(new java.awt.Color(0, 255, 255));
+        elemento21.setText("null");
+        elemento21.setToolTipText("");
+
+        elemento22.setBackground(new java.awt.Color(0, 255, 255));
+        elemento22.setText("null");
+        elemento22.setToolTipText("");
+
+        elemento23.setBackground(new java.awt.Color(0, 255, 255));
+        elemento23.setText("null");
+        elemento23.setToolTipText("");
+
+        elemento24.setBackground(new java.awt.Color(0, 255, 255));
+        elemento24.setText("null");
+        elemento24.setToolTipText("");
+
+        elemento25.setBackground(new java.awt.Color(0, 255, 255));
+        elemento25.setText("null");
+        elemento25.setToolTipText("");
+
+        elemento26.setBackground(new java.awt.Color(0, 255, 255));
+        elemento26.setText("null");
+        elemento26.setToolTipText("");
+
+        elemento27.setBackground(new java.awt.Color(0, 255, 255));
+        elemento27.setText("null");
+        elemento27.setToolTipText("");
+
+        elemento28.setBackground(new java.awt.Color(0, 255, 255));
+        elemento28.setText("null");
+        elemento28.setToolTipText("");
+
+        elemento29.setBackground(new java.awt.Color(0, 255, 255));
+        elemento29.setText("null");
+        elemento29.setToolTipText("");
+
+        elemento30.setBackground(new java.awt.Color(0, 255, 255));
+        elemento30.setText("null");
+        elemento30.setToolTipText("");
+
+        elemento31.setBackground(new java.awt.Color(0, 255, 255));
+        elemento31.setText("null");
+        elemento31.setToolTipText("");
+
+        javax.swing.GroupLayout no5Layout = new javax.swing.GroupLayout(no5);
+        no5.setLayout(no5Layout);
+        no5Layout.setHorizontalGroup(
+            no5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(elemento31, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento30, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento29, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento28, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(elemento27, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento26, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(elemento25, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento24, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(elemento21, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento16, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(elemento18, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento20, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento19, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento22, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9)
+                .addComponent(elemento23, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(elemento17, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        no5Layout.setVerticalGroup(
+            no5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(no5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(no5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(elemento16)
+                    .addComponent(elemento17)
+                    .addComponent(elemento18)
+                    .addComponent(elemento19)
+                    .addComponent(elemento20)
+                    .addComponent(elemento21)
+                    .addComponent(elemento22)
+                    .addComponent(elemento23)
+                    .addComponent(elemento24)
+                    .addComponent(elemento25)
+                    .addComponent(elemento26)
+                    .addComponent(elemento27)
+                    .addComponent(elemento28)
+                    .addComponent(elemento29)
+                    .addComponent(elemento30)
+                    .addComponent(elemento31))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout frameInternoLayout = new javax.swing.GroupLayout(frameInterno.getContentPane());
         frameInterno.getContentPane().setLayout(frameInternoLayout);
         frameInternoLayout.setHorizontalGroup(
             frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frameInternoLayout.createSequentialGroup()
-                .addGap(335, 335, 335)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(no1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(no2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(no3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(no4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(no5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         frameInternoLayout.setVerticalGroup(
             frameInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frameInternoLayout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(jLabel1)
-                .addContainerGap(222, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(frameInternoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(no1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(no2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(no3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(no4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(no5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -207,8 +562,44 @@ public class FrameArvore extends javax.swing.JFrame {
     private javax.swing.JButton btnListaSe;
     private javax.swing.JButton btnListaSeq;
     private javax.swing.JButton btnPilhas;
+    private javax.swing.JButton elemento1;
+    private javax.swing.JButton elemento10;
+    private javax.swing.JButton elemento11;
+    private javax.swing.JButton elemento12;
+    private javax.swing.JButton elemento13;
+    private javax.swing.JButton elemento14;
+    private javax.swing.JButton elemento15;
+    private javax.swing.JButton elemento16;
+    private javax.swing.JButton elemento17;
+    private javax.swing.JButton elemento18;
+    private javax.swing.JButton elemento19;
+    private javax.swing.JButton elemento2;
+    private javax.swing.JButton elemento20;
+    private javax.swing.JButton elemento21;
+    private javax.swing.JButton elemento22;
+    private javax.swing.JButton elemento23;
+    private javax.swing.JButton elemento24;
+    private javax.swing.JButton elemento25;
+    private javax.swing.JButton elemento26;
+    private javax.swing.JButton elemento27;
+    private javax.swing.JButton elemento28;
+    private javax.swing.JButton elemento29;
+    private javax.swing.JButton elemento3;
+    private javax.swing.JButton elemento30;
+    private javax.swing.JButton elemento31;
+    private javax.swing.JButton elemento4;
+    private javax.swing.JButton elemento5;
+    private javax.swing.JButton elemento6;
+    private javax.swing.JButton elemento7;
+    private javax.swing.JButton elemento8;
+    private javax.swing.JButton elemento9;
     private javax.swing.JInternalFrame frameInterno;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel no1;
+    private javax.swing.JPanel no2;
+    private javax.swing.JPanel no3;
+    private javax.swing.JPanel no4;
+    private javax.swing.JPanel no5;
     private javax.swing.JPanel painelMenu;
     // End of variables declaration//GEN-END:variables
 }

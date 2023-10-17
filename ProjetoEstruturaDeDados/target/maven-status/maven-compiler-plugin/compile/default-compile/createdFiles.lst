@@ -5,6 +5,7 @@ com/joaolucas/projetoestruturadedados/FrameListaDe.class
 com/joaolucas/projetoestruturadedados/FrameArvore$4.class
 com/joaolucas/projetoestruturadedados/UI$2.class
 com/joaolucas/projetoestruturadedados/FrameFila$3.class
+com/joaolucas/projetoestruturadedados/FramePilha$9.class
 com/joaolucas/projetoestruturadedados/FramePilha$2.class
 com/joaolucas/projetoestruturadedados/FrameListaSe$7.class
 com/joaolucas/projetoestruturadedados/FrameArvore$1.class
@@ -18,6 +19,7 @@ com/joaolucas/projetoestruturadedados/FrameListaDe$LDE.class
 com/joaolucas/projetoestruturadedados/FrameListaSeqTamanho$3.class
 com/joaolucas/projetoestruturadedados/FrameListaSequencial$2.class
 com/joaolucas/projetoestruturadedados/FrameArvore$3.class
+com/joaolucas/projetoestruturadedados/FramePilha$PilhaSeq.class
 com/joaolucas/projetoestruturadedados/FrameListaSe$6.class
 com/joaolucas/projetoestruturadedados/FramePilha$5.class
 com/joaolucas/projetoestruturadedados/FrameListaSe.class
@@ -27,6 +29,7 @@ com/joaolucas/projetoestruturadedados/FrameListaSeqTamanho.class
 com/joaolucas/projetoestruturadedados/FrameFila$2.class
 com/joaolucas/projetoestruturadedados/FrameListaSe$3.class
 com/joaolucas/projetoestruturadedados/FrameFila$5.class
+com/joaolucas/projetoestruturadedados/FramePilha$8.class
 com/joaolucas/projetoestruturadedados/FrameListaSequencial$8.class
 com/joaolucas/projetoestruturadedados/UI$6.class
 com/joaolucas/projetoestruturadedados/FrameListaSeqTamanho$7.class
@@ -45,6 +48,7 @@ com/joaolucas/projetoestruturadedados/FrameListaSeqTamanho$1.class
 com/joaolucas/projetoestruturadedados/FramePilha$4.class
 com/joaolucas/projetoestruturadedados/FrameListaSequencial$4.class
 com/joaolucas/projetoestruturadedados/FrameListaSe$9.class
+com/joaolucas/projetoestruturadedados/FramePilha$7.class
 com/joaolucas/projetoestruturadedados/FrameListaDe$8.class
 com/joaolucas/projetoestruturadedados/FrameFila$1.class
 com/joaolucas/projetoestruturadedados/FrameListaSequencial$9.class
