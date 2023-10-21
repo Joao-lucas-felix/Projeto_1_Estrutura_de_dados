@@ -4,17 +4,118 @@
  */
 package com.joaolucas.projetoestruturadedados;
 
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author joao
  */
 public class FrameFila extends javax.swing.JFrame {
+    //Implementação de filas disponibilizada pelo professor 
+    public class FilaSeq {
+            private int dados[];
+            private int inicio;
+            private int fim;
+            private int nElementos;
+            //private int tamMax;
 
-    /**
-     * Creates new form FrameFila
-     */
+            public FilaSeq() {
+                inicio = 0;
+                fim = -1;
+                nElementos = 0;
+
+                dados =  new int[100];
+            }
+
+            public FilaSeq(int n) {
+                inicio = 0;
+                fim = -1;
+                nElementos = 0;
+
+                dados =  new int[n];
+            }
+
+            /** Verifica se a Fila está vazia */
+            public boolean vazia () {
+                if (nElementos == 0)
+                        return true;
+                else
+                        return false;
+            }
+
+            /**Verifica se a Fila está cheia */
+            public boolean cheia () {
+                if (nElementos == dados.length)
+                        return true;
+                else
+                        return false;
+            }
+
+            /** Obtém o tamanho da Fila */
+            public int tamanho() {
+                return nElementos;
+            }
+
+            /** Consulta o elemento do início da fila.
+                Retorna -1 se a fila estiver vazia. */
+            public int primeiro() {
+                if (vazia())
+                     throw new InternalError(); // Erro: Fila vazia 
+
+                return dados[inicio];
+            }
+
+            /**Insere um elemento no fim de uma fila
+        Retorna false se a fila estiver cheia, true caso contrário. */
+            public boolean insere(int valor) {
+                if (cheia()){
+                        return false;
+                }
+
+                fim = (fim + 1) % dados.length; // Circularidade 
+                dados[fim] = valor;
+                nElementos++;
+                return true;
+            }
+
+            /**Remove o elemento do início da fila e retorna o valor removido.
+                Retorna -1 se a fila estiver vazia.*/
+            public int remove() {
+                if (vazia())
+                     throw new InternalError();
+
+                // Guarda o valor a ser removido
+                //int valor = primeiro();
+                int valor = dados[inicio];
+
+                // Atualiza o atributo inicio;
+                inicio = (inicio + 1) % dados.length; //Circularidade 
+                nElementos--;
+                return valor;
+            }
+
+    }
+    
+    private FilaSeq fila;
+    private JButton[] listaDebotoes;
+    
     public FrameFila() {
         initComponents();
+        this.fila = new FilaSeq(10);
+        this.listaDebotoes = new JButton[10];
+        this.listaDebotoes[0] = this.elemento1;
+        this.listaDebotoes[1] = this.elemento2;
+        this.listaDebotoes[2] = this.elemento3;
+        this.listaDebotoes[3] = this.elemento4;
+        this.listaDebotoes[4] = this.elemento5;
+        this.listaDebotoes[5] = this.elemento6;
+        this.listaDebotoes[6] = this.elemento7;
+        this.listaDebotoes[7] = this.elemento8;
+        this.listaDebotoes[8] = this.elemento9;
+        this.listaDebotoes[9] = this.elemento10;
+        
+                
     }
 
     /**
@@ -149,6 +250,11 @@ public class FrameFila extends javax.swing.JFrame {
         btnInserir.setBackground(new java.awt.Color(51, 255, 255));
         btnInserir.setText("Inserir");
         btnInserir.setBorder(null);
+        btnInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInserirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelInserirLayout = new javax.swing.GroupLayout(painelInserir);
         painelInserir.setLayout(painelInserirLayout);
@@ -185,6 +291,11 @@ public class FrameFila extends javax.swing.JFrame {
         btnRemover.setBackground(new java.awt.Color(51, 255, 255));
         btnRemover.setText("Remover");
         btnRemover.setBorder(null);
+        btnRemover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelRemoverLayout = new javax.swing.GroupLayout(painelRemover);
         painelRemover.setLayout(painelRemoverLayout);
@@ -216,6 +327,11 @@ public class FrameFila extends javax.swing.JFrame {
         btnConsultar.setBackground(new java.awt.Color(51, 255, 255));
         btnConsultar.setText("Consultar");
         btnConsultar.setBorder(null);
+        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelConsultarLayout = new javax.swing.GroupLayout(painelConsultar);
         painelConsultar.setLayout(painelConsultarLayout);
@@ -386,6 +502,43 @@ public class FrameFila extends javax.swing.JFrame {
         this.dispose();
         frame.setVisible(true);
     }//GEN-LAST:event_btnArvoreActionPerformed
+
+    private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
+        int valor;
+        boolean inseriu;
+        try{
+            valor = Integer.parseInt(this.fieldInserir.getText());
+            if(fila.insere(valor)){
+                this.listaDebotoes[this.fila.tamanho()-1].setText( String.valueOf(valor));
+            }else
+                JOptionPane.showMessageDialog(null, "Pilha Cheia", "Erro", JOptionPane.ERROR_MESSAGE);
+        }catch( NumberFormatException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_btnInserirActionPerformed
+
+    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
+        try{
+            this.fila.remove();
+            for(int i =0; i < this.fila.tamanho(); i++){
+                this.listaDebotoes[i].setText(this.listaDebotoes[i+1].getText());
+            }
+            for(int i = this.fila.tamanho(); i < 10; i++){
+                this.listaDebotoes[i].setText("null");
+            }
+        }catch(InternalError e){
+            JOptionPane.showMessageDialog(null, "Pilha Vazia", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnRemoverActionPerformed
+
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        
+        if(!this.fila.vazia()){
+             JOptionPane.showMessageDialog(null, "O primeiro elemento da fila é: "+ String.valueOf(this.fila.primeiro()), "Topo", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+          JOptionPane.showMessageDialog(null, "Fila Vazia", "Erro", JOptionPane.ERROR_MESSAGE); 
+        } 
+    }//GEN-LAST:event_btnConsultarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
