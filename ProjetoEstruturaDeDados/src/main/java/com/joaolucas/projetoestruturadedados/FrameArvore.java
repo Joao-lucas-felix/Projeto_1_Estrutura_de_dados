@@ -1497,7 +1497,7 @@ public class FrameArvore extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(painelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(frameInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -1569,17 +1569,23 @@ public class FrameArvore extends javax.swing.JFrame {
         // TODO add your handling code here:
         StringBuilder s = new StringBuilder();
         try{
-            if(this.comboBoxCaminhamento.getSelectedIndex() == 0){
-                //pre ordem
-                this.arvoreBinaria.exibePre(s);
-                JOptionPane.showMessageDialog(null, "Os dados pre ordem são: "+ s.toString(), "Pre Ordem", JOptionPane.INFORMATION_MESSAGE);
-            }else if (this.comboBoxCaminhamento.getSelectedIndex() ==1){
-                //in ordem
-                this.arvoreBinaria.exibe(s);
-                JOptionPane.showMessageDialog(null, "Os dados in ordem são: "+ s.toString(), "In Ordem", JOptionPane.INFORMATION_MESSAGE);
-            }else if(this.comboBoxCaminhamento.getSelectedIndex() == 2){
-                this.arvoreBinaria.exibePos(s);
-                JOptionPane.showMessageDialog(null, "Os dados Pos ordem são: "+ s.toString(), "POs Ordem", JOptionPane.INFORMATION_MESSAGE);
+            switch (this.comboBoxCaminhamento.getSelectedIndex()) {
+                case 0:
+                    //pre ordem
+                    this.arvoreBinaria.exibePre(s);
+                    JOptionPane.showMessageDialog(null, "Os dados pre ordem são: "+ s.toString(), "Pre Ordem", JOptionPane.INFORMATION_MESSAGE);
+                    break;
+                case 1:
+                    //in ordem
+                    this.arvoreBinaria.exibe(s);
+                    JOptionPane.showMessageDialog(null, "Os dados in ordem são: "+ s.toString(), "In Ordem", JOptionPane.INFORMATION_MESSAGE);
+                    break;
+                case 2:
+                    this.arvoreBinaria.exibePos(s);
+                    JOptionPane.showMessageDialog(null, "Os dados Pos ordem são: "+ s.toString(), "POs Ordem", JOptionPane.INFORMATION_MESSAGE);
+                    break;
+                default:
+                    break;
             }
         }catch( InternalError e){
             JOptionPane.showMessageDialog(null, "Arvore Vazia", "Erro", JOptionPane.ERROR_MESSAGE);
