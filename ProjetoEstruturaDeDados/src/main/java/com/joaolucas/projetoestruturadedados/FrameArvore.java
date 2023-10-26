@@ -589,9 +589,11 @@ public class FrameArvore extends javax.swing.JFrame {
                 exibe(visual.getEsq(), noDarvore.getEsq());
                 visual.elemento.setText(String.valueOf(noDarvore.conteudo));
                 visual.elemento.setVisible(true);
-                visual.dir.elemento.setVisible(true);
-                visual.esq.elemento.setVisible(true);
-                visual.separadorDosFilhos.setVisible(true);
+                if(visual.dir != null){
+                    visual.dir.elemento.setVisible(true);
+                    visual.esq.elemento.setVisible(true);
+                    visual.separadorDosFilhos.setVisible(true);
+                }
                 exibe(visual.getDir(), noDarvore.getDir());
             }
         }
